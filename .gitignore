@@ -1,0 +1,27 @@
+# Large data and checkpoints — never commit
+data/**
+!data/**/
+!data/**/.gitkeep
+!data/splits/*.txt
+models/**
+!models/**/
+!models/**/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.tif
+*.tiff
+
+# Logs and runs
+logs/*
+!logs/.gitkeep
+wandb/
+lightning_logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.env

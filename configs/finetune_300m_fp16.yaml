@@ -1,0 +1,3 @@
+# Variant-specific settings only. Inherit everything else from base.yaml.
+base: configs/base.yaml
+variant: finetune_300m_fp16

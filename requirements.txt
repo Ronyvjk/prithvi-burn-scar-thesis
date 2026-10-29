@@ -1,0 +1,8 @@
+# Pin exact versions once your environment works (pip freeze > requirements.txt)
+torch
+terratorch
+peft
+bitsandbytes
+pyyaml
+pandas
+rasterio
