@@ -1,0 +1,1281 @@
+===== RESULT FP32_300M version 1268
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1268/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1268/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1268/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9612783193588257       │
+│       test/Boundary_mIoU       │       0.4085512161254883       │
+│ test/Class_Accuracy_Burn scar  │       0.9304816126823425       │
+│ test/Class_Accuracy_Not burned │       0.9920749664306641       │
+│         test/F1_Score          │       0.9595918655395508       │
+│       test/IoU_Burn scar       │        0.8634033203125         │
+│      test/IoU_Not burned       │       0.9850891828536987       │
+│      test/Pixel_Accuracy       │       0.9863734841346741       │
+│           test/loss            │      0.039441801607608795      │
+│           test/mIoU            │       0.9242462515830994       │
+│        test/mIoU_Micro         │       0.9731133580207825       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT FP16_300M version 1268
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1268/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1268/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1268/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP32_300M version 1288
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1288/checkpoints/best-epoch=28.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1288/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1288/checkpoints/best-epoch=28.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9543408155441284       │
+│       test/Boundary_mIoU       │       0.346836656332016        │
+│ test/Class_Accuracy_Burn scar  │       0.9173061847686768       │
+│ test/Class_Accuracy_Not burned │       0.9913754463195801       │
+│         test/F1_Score          │       0.9539629817008972       │
+│       test/IoU_Burn scar       │       0.8457961678504944       │
+│      test/IoU_Not burned       │       0.9830827116966248       │
+│      test/Pixel_Accuracy       │       0.9845191836357117       │
+│           test/loss            │      0.04664379358291626       │
+│           test/mIoU            │       0.9144394397735596       │
+│        test/mIoU_Micro         │       0.9695103764533997       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT FP16_300M version 1288
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1288/checkpoints/best-epoch=28.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1288/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1288/checkpoints/best-epoch=28.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP32_300M version 1289
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1289/checkpoints/best-epoch=26.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1289/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1289/checkpoints/best-epoch=26.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9579198360443115       │
+│       test/Boundary_mIoU       │      0.36589306592941284       │
+│ test/Class_Accuracy_Burn scar  │       0.9234827160835266       │
+│ test/Class_Accuracy_Not burned │       0.9923568964004517       │
+│         test/F1_Score          │       0.9582470655441284       │
+│       test/IoU_Burn scar       │       0.8591123223304749       │
+│      test/IoU_Not burned       │       0.9846711158752441       │
+│      test/Pixel_Accuracy       │       0.9859814643859863       │
+│           test/loss            │      0.04157356172800064       │
+│           test/mIoU            │       0.9218916893005371       │
+│        test/mIoU_Micro         │       0.972350537776947        │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT FP16_300M version 1289
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1289/checkpoints/best-epoch=26.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1289/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1289/checkpoints/best-epoch=26.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP32_300M version 1304
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1304/checkpoints/best-epoch=23.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1304/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1304/checkpoints/best-epoch=23.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9590938091278076       │
+│       test/Boundary_mIoU       │      0.31935685873031616       │
+│ test/Class_Accuracy_Burn scar  │       0.9277098178863525       │
+│ test/Class_Accuracy_Not burned │       0.9904778599739075       │
+│         test/F1_Score          │       0.9547934532165527       │
+│       test/IoU_Burn scar       │       0.8485042452812195       │
+│      test/IoU_Not burned       │       0.9832273721694946       │
+│      test/Pixel_Accuracy       │       0.9846677184104919       │
+│           test/loss            │      0.04768219590187073       │
+│           test/mIoU            │       0.9158657789230347       │
+│        test/mIoU_Micro         │       0.9697984457015991       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT FP16_300M version 1304
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1304/checkpoints/best-epoch=23.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1304/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1304/checkpoints/best-epoch=23.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP32_300M version 1305
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1305/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1305/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1305/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9558082818984985       │
+│       test/Boundary_mIoU       │       0.3819500505924225       │
+│ test/Class_Accuracy_Burn scar  │       0.918961226940155        │
+│ test/Class_Accuracy_Not burned │       0.9926552772521973       │
+│         test/F1_Score          │       0.9576650857925415       │
+│       test/IoU_Burn scar       │       0.8572384119033813       │
+│      test/IoU_Not burned       │       0.9845166802406311       │
+│      test/Pixel_Accuracy       │       0.9858336448669434       │
+│           test/loss            │      0.043326012790203094      │
+│           test/mIoU            │       0.9208775758743286       │
+│        test/mIoU_Micro         │       0.9720631837844849       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT FP16_300M version 1305
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1305/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1305/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_300m_baseline/lightning_logs/version_1305/checkpoints/best-epoch=50.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP16_600M version 1269
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints/best-epoch=35.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints/best-epoch=35.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP16_600M version 1286
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints/best-epoch=32.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints/best-epoch=32.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP16_600M version 1287
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP16_600M version 1302
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+===== RESULT FP16_600M version 1303
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints/best-epoch=47.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2296/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints/best-epoch=47.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Traceback (most recent call last):
+  File "/home/kolanchi/thesis-env/bin/terratorch", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/__main__.py", line 40, in main
+    _ = build_lightning_cli()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/cli_tools.py", line 594, in build_lightning_cli
+    return MyLightningCLI(
+           ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 421, in __init__
+    self._run_subcommand(self.subcommand)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py", line 759, in _run_subcommand
+    fn(**fn_kwargs)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 821, in test
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 864, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/trainer.py", line 1116, in _run_stage
+    return self._evaluation_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 146, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 441, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/strategies/strategy.py", line 425, in test_step
+    return self.lightning_module.test_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/segmentation_tasks.py", line 359, in test_step
+    model_output = self.handle_full_or_tiled_inference(x, self.tiled_inference_on_testing, **rest)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/tasks/base_task.py", line 87, in handle_full_or_tiled_inference
+    model_output: ModelOutput = self(x, **rest)
+                                ^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torchgeo/trainers/base.py", line 81, in forward
+    return self.model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/pixel_wise_model.py", line 129, in forward
+    features = self.encoder(x, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_vit.py", line 375, in forward_filter_indices
+    features = model.forward_features(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 497, in forward_features
+    x = self.patch_embed(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/terratorch/models/backbones/prithvi_mae.py", line 209, in forward
+    x = self.proj(x)
+        ^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 723, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kolanchi/thesis-env/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 718, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Input type (float) and bias type (c10::Half) should be the same
+Finished lun 09 nov 2026 00:20:08 CET

@@ -1,0 +1,295 @@
+########## version 1269 : /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints/best-epoch=35.ckpt
+squeezed 629.1 M of 657.2 M numbers (95.7 %)
+estimated INT8 model size (rest kept in FP16): 685 MB
+===== RESULT FP32 version 1269
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints/best-epoch=35.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints/best-epoch=35.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9627389907836914       │
+│       test/Boundary_mIoU       │      0.39287659525871277       │
+│ test/Class_Accuracy_Burn scar  │       0.9322407245635986       │
+│ test/Class_Accuracy_Not burned │       0.9932372570037842       │
+│         test/F1_Score          │       0.9630430936813354       │
+│       test/IoU_Burn scar       │       0.8742790222167969       │
+│      test/IoU_Not burned       │       0.986419141292572        │
+│      test/Pixel_Accuracy       │       0.9875910878181458       │
+│           test/loss            │      0.04124455153942108       │
+│           test/mIoU            │       0.9303491115570068       │
+│        test/mIoU_Micro         │       0.9754863381385803       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT INT8W version 1269
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /tmp/int8w_1269.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1269/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /tmp/int8w_1269.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.962714672088623        │
+│       test/Boundary_mIoU       │      0.39258381724357605       │
+│ test/Class_Accuracy_Burn scar  │       0.9321917295455933       │
+│ test/Class_Accuracy_Not burned │       0.9932375550270081       │
+│         test/F1_Score          │       0.9630296230316162       │
+│       test/IoU_Burn scar       │       0.8742359280586243       │
+│      test/IoU_Not burned       │       0.9864146113395691       │
+│      test/Pixel_Accuracy       │       0.9875868558883667       │
+│           test/loss            │      0.04121899604797363       │
+│           test/mIoU            │       0.9303252696990967       │
+│        test/mIoU_Micro         │       0.9754781126976013       │
+└────────────────────────────────┴────────────────────────────────┘
+########## version 1286 : /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints/best-epoch=32.ckpt
+squeezed 629.1 M of 657.2 M numbers (95.7 %)
+estimated INT8 model size (rest kept in FP16): 685 MB
+===== RESULT FP32 version 1286
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints/best-epoch=32.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints/best-epoch=32.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.953930675983429        │
+│       test/Boundary_mIoU       │      0.38746482133865356       │
+│ test/Class_Accuracy_Burn scar  │       0.9136537909507751       │
+│ test/Class_Accuracy_Not burned │       0.9942075610160828       │
+│         test/F1_Score          │       0.9600356817245483       │
+│       test/IoU_Burn scar       │       0.8645597696304321       │
+│      test/IoU_Not burned       │       0.9855270385742188       │
+│      test/Pixel_Accuracy       │       0.9867509603500366       │
+│           test/loss            │      0.04042030870914459       │
+│           test/mIoU            │       0.9250434041023254       │
+│        test/mIoU_Micro         │       0.9738485813140869       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT INT8W version 1286
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /tmp/int8w_1286.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1286/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /tmp/int8w_1286.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9538984894752502       │
+│       test/Boundary_mIoU       │      0.38729754090309143       │
+│ test/Class_Accuracy_Burn scar  │       0.9135916233062744       │
+│ test/Class_Accuracy_Not burned │       0.9942053556442261       │
+│         test/F1_Score          │       0.9600117206573486       │
+│       test/IoU_Burn scar       │       0.8644837737083435       │
+│      test/IoU_Not burned       │       0.9855186939239502       │
+│      test/Pixel_Accuracy       │       0.9867432713508606       │
+│           test/loss            │      0.04041684418916702       │
+│           test/mIoU            │       0.9250012636184692       │
+│        test/mIoU_Micro         │       0.9738335013389587       │
+└────────────────────────────────┴────────────────────────────────┘
+########## version 1287 : /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints/best-epoch=29.ckpt
+squeezed 629.1 M of 657.2 M numbers (95.7 %)
+estimated INT8 model size (rest kept in FP16): 685 MB
+===== RESULT FP32 version 1287
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9513447284698486       │
+│       test/Boundary_mIoU       │      0.35440221428871155       │
+│ test/Class_Accuracy_Burn scar  │       0.910022497177124        │
+│ test/Class_Accuracy_Not burned │       0.9926669001579285       │
+│         test/F1_Score          │       0.9550401568412781       │
+│       test/IoU_Burn scar       │       0.8489902019500732       │
+│      test/IoU_Not burned       │       0.9836384654045105       │
+│      test/Pixel_Accuracy       │       0.9850168228149414       │
+│           test/loss            │      0.04401302710175514       │
+│           test/mIoU            │       0.9163143634796143       │
+│        test/mIoU_Micro         │       0.9704759120941162       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT INT8W version 1287
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /tmp/int8w_1287.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1287/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /tmp/int8w_1287.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9513632655143738       │
+│       test/Boundary_mIoU       │       0.3541761636734009       │
+│ test/Class_Accuracy_Burn scar  │       0.9100689888000488       │
+│ test/Class_Accuracy_Not burned │       0.9926575422286987       │
+│         test/F1_Score          │       0.9550304412841797       │
+│       test/IoU_Burn scar       │       0.8489610552787781       │
+│      test/IoU_Not burned       │       0.9836339354515076       │
+│      test/Pixel_Accuracy       │       0.9850126504898071       │
+│           test/loss            │      0.04399464651942253       │
+│           test/mIoU            │       0.9162974953651428       │
+│        test/mIoU_Micro         │       0.9704678654670715       │
+└────────────────────────────────┴────────────────────────────────┘
+########## version 1302 : /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints/best-epoch=29.ckpt
+squeezed 629.1 M of 657.2 M numbers (95.7 %)
+estimated INT8 model size (rest kept in FP16): 685 MB
+===== RESULT FP32 version 1302
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints/best-epoch=29.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.9458119869232178       │
+│       test/Boundary_mIoU       │      0.39144811034202576       │
+│ test/Class_Accuracy_Burn scar  │       0.8965579271316528       │
+│ test/Class_Accuracy_Not burned │       0.9950660467147827       │
+│         test/F1_Score          │       0.9571120738983154       │
+│       test/IoU_Burn scar       │       0.855193555355072        │
+│      test/IoU_Not burned       │       0.9846758842468262       │
+│      test/Pixel_Accuracy       │       0.9859475493431091       │
+│           test/loss            │      0.04062686115503311       │
+│           test/mIoU            │       0.9199347496032715       │
+│        test/mIoU_Micro         │       0.9722846746444702       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT INT8W version 1302
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /tmp/int8w_1302.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1302/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /tmp/int8w_1302.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.945755124092102        │
+│       test/Boundary_mIoU       │       0.391347199678421        │
+│ test/Class_Accuracy_Burn scar  │       0.8964444398880005       │
+│ test/Class_Accuracy_Not burned │       0.9950658082962036       │
+│         test/F1_Score          │       0.957076907157898        │
+│       test/IoU_Burn scar       │       0.8550828695297241       │
+│      test/IoU_Not burned       │       0.9846641421318054       │
+│      test/Pixel_Accuracy       │       0.9859368205070496       │
+│           test/loss            │      0.04063941538333893       │
+│           test/mIoU            │       0.9198734760284424       │
+│        test/mIoU_Micro         │       0.9722635746002197       │
+└────────────────────────────────┴────────────────────────────────┘
+########## version 1303 : /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints/best-epoch=47.ckpt
+squeezed 629.1 M of 657.2 M numbers (95.7 %)
+estimated INT8 model size (rest kept in FP16): 685 MB
+===== RESULT FP32 version 1303
+[rank: 0] Seed set to 2
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints/best-epoch=47.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints/best-epoch=47.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.957425594329834        │
+│       test/Boundary_mIoU       │       0.4174807071685791       │
+│ test/Class_Accuracy_Burn scar  │       0.9216806292533875       │
+│ test/Class_Accuracy_Not burned │       0.9931704998016357       │
+│         test/F1_Score          │       0.9597723484039307       │
+│       test/IoU_Burn scar       │       0.863845705986023        │
+│      test/IoU_Not burned       │       0.985298752784729        │
+│      test/Pixel_Accuracy       │       0.9865530133247375       │
+│           test/loss            │      0.04079900309443474       │
+│           test/mIoU            │       0.924572229385376        │
+│        test/mIoU_Micro         │       0.9734628200531006       │
+└────────────────────────────────┴────────────────────────────────┘
+===== RESULT INT8W version 1303
+[rank: 0] Seed set to 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/cli.py:734: `SemanticSegmentationTask.configure_optimizers` will be overridden by `MyLightningCLI.configure_optimizers`.
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /home/kolanchi/thesis-env/bin/terratorch test --conf ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Restoring states from the checkpoint path at /tmp/int8w_1303.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:566: The dirpath has changed from '/home/kolanchi/thesis/runs/burnscars_600m_baseline/lightning_logs/version_1303/checkpoints' to '/home/kolanchi/thesis/runs/int8/testlogs/lightning_logs/version_2294/checkpoints', therefore `best_model_score`, `kth_best_model_path`, `kth_value`, `last_model_path` and `best_k_models` won't be reloaded. Only `best_model_path` will be reloaded.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /tmp/int8w_1303.ckpt
+/home/kolanchi/thesis-env/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Test metric           ┃          DataLoader 0          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/Accuracy          │       0.957390546798706        │
+│       test/Boundary_mIoU       │       0.417390912771225        │
+│ test/Class_Accuracy_Burn scar  │       0.9216171503067017       │
+│ test/Class_Accuracy_Not burned │       0.9931638836860657       │
+│         test/F1_Score          │       0.9597369432449341       │
+│       test/IoU_Burn scar       │       0.8637338876724243       │
+│      test/IoU_Not burned       │       0.9852858185768127       │
+│      test/Pixel_Accuracy       │       0.9865410923957825       │
+│           test/loss            │      0.04082046449184418       │
+│           test/mIoU            │       0.9245098829269409       │
+│        test/mIoU_Micro         │       0.9734396934509277       │
+└────────────────────────────────┴────────────────────────────────┘
+Finished dom 08 nov 2026 23:38:09 CET

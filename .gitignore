@@ -1,0 +1,5 @@
+runs/*
+!runs/logs/
+*.ckpt
+*.pt
+__pycache__/
