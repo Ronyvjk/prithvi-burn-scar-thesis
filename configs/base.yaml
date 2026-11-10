@@ -1,0 +1,12 @@
+# Shared settings — every variant must use these unchanged
+data:
+  root: data/raw/hls_burn_scars
+  splits_dir: data/splits
+training:
+  epochs: TODO
+  batch_size: TODO
+  learning_rate: TODO
+  seeds: [0, 1, 2]
+evaluation:
+  test_split: data/splits/test.txt
+  results_file: results/results.csv
